@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collection Form</title>
+</head>
+<body>
+    <h2>Visitor Information Form</h2>
+    <form id="dataForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="building">Building:</label><br>
+        <input type="text" id="building" name="building" required><br><br>
+
+        <label for="apartment">Apartment No.:</label><br>
+        <input type="text" id="apartment" name="apartment" required><br><br>
+
+        <label for="profession">Profession:</label><br>
+        <input type="text" id="profession" name="profession" required><br><br>
+
+        <label for="suggestions">Suggestions:</label><br>
+        <textarea id="suggestions" name="suggestions" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("dataForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            let name = document.getElementById("name").value;
+            let building = document.getElementById("building").value;
+            let apartment = document.getElementById("apartment").value;
+            let profession = document.getElementById("profession").value;
+            let suggestions = document.getElementById("suggestions").value;
+
+            console.log("Collected Data:");
+            console.log("Name:", name);
+            console.log("Building:", building);
+            console.log("Apartment No.:", apartment);
+            console.log("Profession:", profession);
+            console.log("Suggestions:", suggestions);
+
+            alert("Thank you for your submission!");
+        });
+    </script>
+</body>
+</html>
